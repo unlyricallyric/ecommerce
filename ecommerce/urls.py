@@ -22,7 +22,12 @@ from .views import (
     example,
     )
 from blog.views import (
-    blog_post_detail_page
+    blog_post_detail_page,
+    blog_post_list_view,
+    blog_post_create_view,
+    blog_post_detail_view,
+    blog_post_update_view,
+    blog_post_delete_view,
     )
 
 urlpatterns = [
@@ -30,6 +35,7 @@ urlpatterns = [
     path('about/', about_page),
     path('contact/', contact_page),
     path('example/', example),
-    path('blog/', blog_post_detail_page),
+    path('blog/', blog_post_list_view),
+    path('blog/<str:slug>', blog_post_detail_page),
     path('admin/', admin.site.urls),
 ]
