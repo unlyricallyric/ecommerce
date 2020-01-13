@@ -2,7 +2,6 @@ from django.urls import path, include
 from blog.views import (
     home_page,
     blog_post_list_view,
-    blog_post_create_view,
     blog_post_detail_view,
     blog_post_update_view,
     blog_post_delete_view,
